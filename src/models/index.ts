@@ -1,25 +1,29 @@
 export interface VideoDownloadJobModel {
-  _id: string;
+  asset_id: string;
   source_url: string;
 }
 
 export interface VideoValidationJobModel {
-  _id: string;
+  asset_id: string;
 }
 
 export interface VideoProcessingJobModel {
-  _id: string;
+  asset_id: string;
+  file_id: string;
   height: number;
   width: number;
 }
 
 export interface VideoUploadJobModel {
-  _id: string;
+  asset_id: string;
+  file_id: string;
   height: number;
   width: number;
 }
 
 export interface JobMetadataModel {
+  asset_id: string;
+  file_id: string;
   height: number;
   width: number;
   processRoutingKey: string;
@@ -42,8 +46,7 @@ export interface UpdateAssetEventModel {
 }
 
 export interface UpdateFileStatusEventModel {
-  asset_id: string;
-  height: number;
+  file_id: string;
   status: string;
   details: string;
   dir_size: number;
