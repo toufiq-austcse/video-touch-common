@@ -4,9 +4,15 @@
   "description": "",
   "main": "dist/index",
   "types": "dist/index",
-  "author": "",
-  "private": true,
+  "author": "Md. Toufiqul Islam",
+  "private": false,
   "license": "UNLICENSED",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "url": "git@github.com:toufiq-austcse/video-touch-common.git"
+  },
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
