@@ -52,3 +52,6 @@ export interface UpdateFileStatusEventModel {
   dir_size: number;
 }
 
+export interface ThumbnailGenerationJobModel {
+  asset_id: string;
+}
