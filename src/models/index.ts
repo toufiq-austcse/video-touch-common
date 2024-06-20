@@ -54,4 +54,5 @@ export interface UpdateFileStatusEventModel {
 
 export interface ThumbnailGenerationJobModel {
   asset_id: string;
+  file_id: string;
 }
