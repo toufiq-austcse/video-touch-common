@@ -65,8 +65,8 @@ export function getMainManifestPath(assetId: string, tempVideoDir: string) {
   return `${getLocalVideoRootPath(assetId, tempVideoDir)}/${getMainManifestFileName()}`;
 }
 
-export function getMasterPlaylistUrl(assetId: string, masterFileName: string, cdnBaseUrL: string) {
-  return `${cdnBaseUrL}/${assetId}/${masterFileName}`;
+export function getMasterPlaylistUrl(assetId: string, cdnBaseUrl: string) {
+  return `${cdnBaseUrl}/${getS3ManifestPath(assetId)}`;
 }
 
 export function getMainManifestFileName() {
