@@ -46,6 +46,14 @@ export function getS3ManifestPath(videoId: string) {
   return `videos/${videoId}/${getMainManifestFileName()}`;
 }
 
+export function getS3ThumbnailPath(videoId: string) {
+  return `videos/${videoId}/${getThumbnailFileName()}`;
+}
+
+export function getLocalThumbnailPath(videoId: string, tempVideoDir: string) {
+  return `${getLocalVideoRootPath(videoId.toString(), tempVideoDir)}/${getThumbnailFileName()}`;
+}
+
 export async function getDirSize(directory: string) {
   const files = await readdir(directory);
   const stats = files.map((file) => stat(path.join(directory, file)));
@@ -63,6 +71,10 @@ export function getMasterPlaylistUrl(assetId: string, masterFileName: string, cd
 
 export function getMainManifestFileName() {
   return 'main.m3u8';
+}
+
+export function getThumbnailFileName() {
+  return 'thumbnail.png';
 }
 
 export function getServerFileName(originalName: string): string {
