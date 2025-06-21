@@ -1,0 +1,40 @@
+# Source code
+/src
+
+# Tests
+/test
+/coverage
+/.nyc_output
+
+# Configuration files
+tsconfig.json
+tsconfig.build.json
+nest-cli.json
+.prettierrc
+.eslintrc.js
+
+# Git and GitHub
+.git
+.gitignore
+.github
+
+# IDE
+.idea
+.vscode
+*.sublime-workspace
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Package manager
+node_modules
+pnpm-lock.yaml

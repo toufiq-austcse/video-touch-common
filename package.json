@@ -1,15 +1,12 @@
 {
-  "name": "@toufiq-austcse/video-touch-common",
+  "name": "video-touch-common",
   "version": "1.0.1",
-  "description": "",
+  "description": "Common utilities, models, and constants for Video Touch applications",
   "main": "dist/index",
   "types": "dist/index",
   "author": "Md. Toufiqul Islam",
   "private": false,
-  "license": "UNLICENSED",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
+  "license": "MIT",
   "repository": {
     "url": "git@github.com:toufiq-austcse/video-touch-common.git"
   },
@@ -25,7 +22,9 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "prepublishOnly": "npm run build",
+    "publish": "npm publish --access public"
   },
   "dependencies": {
     "@nestjs/cli": "^10.0.0",
