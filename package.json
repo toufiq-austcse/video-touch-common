@@ -1,6 +1,6 @@
 {
   "name": "video-touch-common",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Common utilities, models, and constants for Video Touch applications",
   "main": "dist/index",
   "types": "dist/index",
