@@ -19,6 +19,7 @@ export interface VideoUploadJobModel {
   file_id: string;
   height: number;
   width: number;
+  type: string;
 }
 
 export interface JobMetadataModel {
