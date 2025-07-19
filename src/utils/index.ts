@@ -42,7 +42,7 @@ export function getS3VideoPathByHeight(videoId: string, height: number, s3Bucket
   return `s3://${s3BucketName}/videos/${videoId}/${height}`;
 }
 
-export function getSourceFileS3VideoPath(videoId: string, sourceFileName: string, s3BucketName: string) {
+export function getS3SourceFileVideoPath(videoId: string, sourceFileName: string, s3BucketName: string) {
   return `s3://${s3BucketName}/videos/${videoId}/${sourceFileName}`;
 }
 
