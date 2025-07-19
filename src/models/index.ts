@@ -20,6 +20,7 @@ export interface VideoUploadJobModel {
   height: number;
   width: number;
   type: string;
+  name: string;
 }
 
 export interface JobMetadataModel {
