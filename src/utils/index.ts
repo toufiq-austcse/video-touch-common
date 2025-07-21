@@ -38,16 +38,20 @@ export function getFileName(height: number) {
   return `${height}_out.m3u8`;
 }
 
-export function getS3VideoPathByHeight(videoId: string, height: number, s3BucketName: string) {
+export function getS3UriVideoPathByHeight(videoId: string, height: number, s3BucketName: string) {
   return `s3://${s3BucketName}/videos/${videoId}/${height}`;
 }
 
-export function getS3SourceFileVideoPath(videoId: string, sourceFileName: string, s3BucketName: string) {
+export function getS3UriSourceFileVideoPath(videoId: string, sourceFileName: string, s3BucketName: string) {
   return `s3://${s3BucketName}/videos/${videoId}/${sourceFileName}`;
 }
 
 export function getS3ManifestPath(videoId: string) {
   return `videos/${videoId}/${getMainManifestFileName()}`;
+}
+
+export function getS3SourceFileVideoPath(videoId: string, sourceFileName: string) {
+  return `videos/${videoId}/${sourceFileName}`;
 }
 
 export function getS3ThumbnailPath(videoId: string) {
