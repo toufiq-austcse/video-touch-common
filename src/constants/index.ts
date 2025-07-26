@@ -28,5 +28,6 @@ export const VIDEO_RESOLUTION = {
 export const FILE_TYPE = {
   PLAYLIST: 'playlist',
   THUMBNAIL: 'thumbnail',
-  SOURCE: 'source'
+  SOURCE: 'source',
+  DOWNLOAD: ' download'
 };
