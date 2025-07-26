@@ -29,5 +29,5 @@ export const FILE_TYPE = {
   PLAYLIST: 'playlist',
   THUMBNAIL: 'thumbnail',
   SOURCE: 'source',
-  DOWNLOAD: ' download'
+  DOWNLOAD: 'download'
 };
