@@ -16,6 +16,12 @@ export interface VideoProcessingJobModel {
   name: string;
 }
 
+export interface AudioExtractionJobModel {
+  asset_id: string;
+  file_id: string;
+  name: string;
+}
+
 export interface VideoUploadJobModel {
   asset_id: string;
   file_id: string;
