@@ -4,7 +4,7 @@ import { readdir, stat } from 'fs/promises';
 
 export function concatObject(obj: Object, separator: string = ', ') {
   return Object.keys(obj)
-    .map(function (key, index) {
+    .map(function(key, index) {
       return (obj as any)[key];
     })
     .join(separator);
@@ -53,8 +53,13 @@ export function getS3ManifestPath(videoId: string) {
 export function getS3SourceFileVideoPath(videoId: string, sourceFileName: string) {
   return `videos/${videoId}/${sourceFileName}`;
 }
+
 export function getS3DownloadFilePath(assetId: string, downloadFileName: string) {
   return `videos/${assetId}/${downloadFileName}`;
+}
+
+export function getS3AudioFilePath(assetId: string, audioFileName: string) {
+  return `videos/${assetId}/${audioFileName}`;
 }
 
 export function getS3ThumbnailPath(videoId: string) {
