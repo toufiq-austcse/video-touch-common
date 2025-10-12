@@ -22,13 +22,14 @@ export interface AudioExtractionJobModel {
   name: string;
 }
 
-export interface VideoUploadJobModel {
+export interface FileUploadJobModel {
   asset_id: string;
   file_id: string;
   height: number;
   width: number;
   type: string;
   name: string;
+  size: number;
 }
 
 export interface JobMetadataModel {
