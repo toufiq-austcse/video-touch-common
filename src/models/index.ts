@@ -22,6 +22,12 @@ export interface AudioExtractionJobModel {
   name: string;
 }
 
+export interface AudioTranscriptionJobModel {
+  asset_id: string;
+  file_id: string;
+  name: string;
+}
+
 export interface FileUploadJobModel {
   asset_id: string;
   file_id: string;

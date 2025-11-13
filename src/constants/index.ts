@@ -31,5 +31,6 @@ export const FILE_TYPE = {
   THUMBNAIL: 'thumbnail',
   SOURCE: 'source',
   DOWNLOAD: 'download',
-  AUDIO: 'audio'
+  AUDIO: 'audio',
+  TRANSCRIPT: 'transcript'
 };
