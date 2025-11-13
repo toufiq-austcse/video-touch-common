@@ -18,6 +18,22 @@ export function getLocalVideoMp4Path(videoId: string, tempVideoDir: string) {
   return `${path}/${videoId}.mp4`;
 }
 
+export function getLocalMp3Path(videoId: string, tempVideoDir: string) {
+  let path = getLocalVideoRootPath(videoId, tempVideoDir);
+  if (!fs.existsSync(path)) {
+    fs.mkdirSync(path, { recursive: true });
+  }
+  return `${path}/${getAudioFileName()}`;
+}
+
+export function getLocalTranscriptPath(videoId: string, tempVideoDir: string) {
+  let path = getLocalVideoRootPath(videoId, tempVideoDir);
+  if (!fs.existsSync(path)) {
+    fs.mkdirSync(path, { recursive: true });
+  }
+  return `${path}/${getTranscriptFileName()}`;
+}
+
 export function getLocalVideoRootPath(videoId: string, tempVideoDir: string) {
   return `${tempVideoDir}/${videoId}`;
 }
@@ -97,6 +113,14 @@ export function getServerFileName(originalName: string): string {
   let extension = originalName.split('.').pop();
   return `${Date.now()}.${extension}`;
 }
+
+export const getAudioFileName = (): string => {
+  return 'audio.mp3';
+};
+
+export const getTranscriptFileName = (): string => {
+  return 'transcript.jsonl';
+};
 
 export function getTempLocalUploadDirectory(tempUploadDir: string) {
   return tempUploadDir;
