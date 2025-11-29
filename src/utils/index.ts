@@ -82,6 +82,10 @@ export function getS3ThumbnailPath(videoId: string) {
   return `videos/${videoId}/${getThumbnailFileName()}`;
 }
 
+export function getS3TranscriptFilePath(assetId: string, transcriptFileName: string) {
+  return `videos/${assetId}/${transcriptFileName}`;
+}
+
 export function getLocalThumbnailPath(videoId: string, tempVideoDir: string) {
   return `${getLocalVideoRootPath(videoId.toString(), tempVideoDir)}/${getThumbnailFileName()}`;
 }
