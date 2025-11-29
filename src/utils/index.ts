@@ -119,7 +119,7 @@ export const getAudioFileName = (): string => {
 };
 
 export const getTranscriptFileName = (): string => {
-  return 'transcript.jsonl';
+  return 'transcript.json';
 };
 
 export function getTempLocalUploadDirectory(tempUploadDir: string) {
