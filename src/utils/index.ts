@@ -18,6 +18,22 @@ export function getLocalVideoMp4Path(videoId: string, tempVideoDir: string) {
   return `${path}/${videoId}.mp4`;
 }
 
+export function getLocalAudioChunksDir(videoId: string, tempVideoDir: string) {
+  let path = `${getLocalVideoRootPath(videoId, tempVideoDir)}/audio_chunks`;
+  if (!fs.existsSync(path)) {
+    fs.mkdirSync(path, { recursive: true });
+  }
+  return path;
+}
+
+export function getLocalPartialTranscriptsDir(videoId: string, tempVideoDir: string) {
+  let path = `${getLocalVideoRootPath(videoId, tempVideoDir)}/transcripts`;
+  if (!fs.existsSync(path)) {
+    fs.mkdirSync(path, { recursive: true });
+  }
+  return path;
+}
+
 export function getLocalMp3Path(videoId: string, tempVideoDir: string) {
   let path = getLocalVideoRootPath(videoId, tempVideoDir);
   if (!fs.existsSync(path)) {

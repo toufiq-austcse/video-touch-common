@@ -32,5 +32,6 @@ export const FILE_TYPE = {
   SOURCE: 'source',
   DOWNLOAD: 'download',
   AUDIO: 'audio',
-  TRANSCRIPT: 'transcript'
+  TRANSCRIPT: 'transcript',
+  PARTIAL_TRANSCRIPT: 'partial_transcript'
 };

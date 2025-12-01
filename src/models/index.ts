@@ -16,6 +16,17 @@ export interface VideoProcessingJobModel {
   name: string;
 }
 
+export interface AudioTranscriptionMergeJobModel {
+  asset_id: string;
+  file_id: string;
+  name: string;
+  type: string;
+  partial_transcript_files: {
+    name: string;
+    audio_start_time: string;
+  }[];
+}
+
 export interface AudioExtractionJobModel {
   asset_id: string;
   file_id: string;
@@ -26,6 +37,8 @@ export interface AudioTranscriptionJobModel {
   asset_id: string;
   file_id: string;
   name: string;
+  audio_file_name: string;
+  audio_start_time: string;
 }
 
 export interface FileUploadJobModel {
