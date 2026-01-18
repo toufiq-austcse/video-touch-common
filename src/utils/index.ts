@@ -78,27 +78,31 @@ export function getS3UriSourceFileVideoPath(videoId: string, sourceFileName: str
   return `s3://${s3BucketName}/videos/${videoId}/${sourceFileName}`;
 }
 
-export function getS3ManifestPath(videoId: string) {
+export function getBunnyUriVideoPathByHeight(videoId: string, height: number) {
+  return `videos/${videoId}/${height}`;
+}
+
+export function getServerManifestPath(videoId: string) {
   return `videos/${videoId}/${getMainManifestFileName()}`;
 }
 
-export function getS3SourceFileVideoPath(videoId: string, sourceFileName: string) {
+export function getServerSourceFileVideoPath(videoId: string, sourceFileName: string) {
   return `videos/${videoId}/${sourceFileName}`;
 }
 
-export function getS3DownloadFilePath(assetId: string, downloadFileName: string) {
+export function getServerDownloadFilePath(assetId: string, downloadFileName: string) {
   return `videos/${assetId}/${downloadFileName}`;
 }
 
-export function getS3AudioFilePath(assetId: string, audioFileName: string) {
+export function getServerAudioFilePath(assetId: string, audioFileName: string) {
   return `videos/${assetId}/${audioFileName}`;
 }
 
-export function getS3ThumbnailPath(videoId: string) {
+export function getServerThumbnailPath(videoId: string) {
   return `videos/${videoId}/${getThumbnailFileName()}`;
 }
 
-export function getS3TranscriptFilePath(assetId: string, transcriptFileName: string) {
+export function getServerTranscriptFilePath(assetId: string, transcriptFileName: string) {
   return `videos/${assetId}/${transcriptFileName}`;
 }
 
@@ -118,7 +122,7 @@ export function getMainManifestPath(assetId: string, tempVideoDir: string) {
 }
 
 export function getMasterPlaylistUrl(assetId: string, cdnBaseUrl: string) {
-  return `${cdnBaseUrl}/${getS3ManifestPath(assetId)}`;
+  return `${cdnBaseUrl}/${getServerManifestPath(assetId)}`;
 }
 
 export function getMainManifestFileName() {
