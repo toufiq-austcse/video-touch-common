@@ -35,3 +35,8 @@ export const FILE_TYPE = {
   TRANSCRIPT: 'transcript',
   PARTIAL_TRANSCRIPT: 'partial_transcript'
 };
+
+export const STORAGE_PROVIDER = {
+  S3: 's3',
+  BUNNY: 'bunny'
+};
