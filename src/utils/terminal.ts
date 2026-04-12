@@ -1,11 +1,11 @@
 import * as childProcess from 'child_process';
 
 export const terminal = async (cmd: string): Promise<string> =>
-  new Promise(async (resolve, reject) => {
+  new Promise((resolve, reject) => {
     console.log('executing.... ', cmd);
-    childProcess.exec(cmd, { maxBuffer: 1024 * 1500 }, (err, stdout, stderr) => {
+    childProcess.exec(cmd, { maxBuffer: 1024 * 1024 * 100 }, (err, stdout, stderr) => {
       if (err) {
-        reject(err);
+        return reject(err);
       }
       resolve(stderr ? stderr : stdout);
     });
