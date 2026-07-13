@@ -38,5 +38,6 @@ export const FILE_TYPE = {
 
 export const STORAGE_PROVIDER = {
   S3: 's3',
-  BUNNY: 'bunny'
+  BUNNY: 'bunny',
+  R2: 'r2'
 };
